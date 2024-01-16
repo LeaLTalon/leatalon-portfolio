@@ -13,12 +13,17 @@ document.addEventListener("DOMContentLoaded", function () {
       const filterValue = button.getAttribute("data-filter");
 
       projects.forEach((project) => {
-        const projectTags = project.getAttribute("data-tags").split(",");
+        const projectTagsAttribute = project.getAttribute("data-tags");
 
-        if (projectTags.includes(filterValue) || filterValue === "all") {
-          project.style.display = "block";
-        } else {
-          project.style.display = "none";
+        // Vérifier si l'attribut data-tags est défini
+        if (projectTagsAttribute !== null) {
+          const projectTags = projectTagsAttribute.split(",");
+
+          if (projectTags.includes(filterValue) || filterValue === "all") {
+            project.style.display = "block";
+          } else {
+            project.style.display = "none";
+          }
         }
       });
     });
