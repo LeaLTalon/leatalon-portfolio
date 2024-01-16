@@ -1,0 +1,26 @@
+/*!
+ * Start Bootstrap - Personal v1.0.1 (https://startbootstrap.com/template-overviews/personal)
+ * Copyright 2013-2023 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-personal/blob/master/LICENSE)
+ */
+// This file is intentionally blank
+// Use this file to add JavaScript to your project
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-button");
+  const projects = document.querySelectorAll(".project");
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filterValue = button.getAttribute("data-filter");
+
+      projects.forEach((project) => {
+        const projectTags = project.getAttribute("data-tags").split(",");
+
+        if (projectTags.includes(filterValue) || filterValue === "all") {
+          project.style.display = "block";
+        } else {
+          project.style.display = "none";
+        }
+      });
+    });
+  });
+});
