@@ -723,6 +723,48 @@ progress {
   margin-left: auto;
 }
 
+@media (max-width: 990px) {
+ .card-project {
+  width: 100% !important;
+ }
+.container-content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.content-text {
+  width: 100%;
+  height: auto;
+  margin-top: 1.875em;
+}
+.content-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.625em;
+}
+}
+
+@media (max-width: 576px) {
+  .card-project {
+   width: 100% !important;
+  }
+ .container-content {
+   display: flex;
+   flex-direction: column-reverse;
+ }
+ .content-text {
+   width: 100%;
+   height: auto;
+   margin-top: 1.875em;
+ }
+ .content-img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 0.625em;
+ }
+ }
+
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -11749,6 +11791,8 @@ html {
     width: 3vw;
     left: -4vw;
   }
+
+
 }
 @media (min-width: 768px) {
   .profile {
