@@ -786,7 +786,7 @@ progress {
   width: auto;
   white-space: nowrap;
   flex-wrap: wrap;
-  font-size: 0.875em;
+  font-size: 0.625em;
  }
 
 .container-button{
