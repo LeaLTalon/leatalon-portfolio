@@ -636,6 +636,7 @@ progress {
 .filter-button
 {
     font-size: 1em;
+    background-color: white;
     border: 0.06em solid #8C36AA;
     border-radius: 0.625em;
     text-align: center;
@@ -645,6 +646,7 @@ progress {
     padding: 0.625em 1.25em;
     transition: all 0.5s;
     cursor: pointer;
+    
 }
 
 .tag-tools{
@@ -701,6 +703,10 @@ progress {
   border-radius: 0.625em;
 }
 
+.container-button {
+  display: flex;
+}
+
 .text-project{
   text-align: justify;
 }
@@ -721,6 +727,16 @@ progress {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
+}
+
+.filter-button:hover {
+  background-color: #8C36AA;
+  color: #fff;
+}
+
+.active {
+  background-color: #8C36AA !important;
+  color: #fff !important;
 }
 
 @media (max-width: 990px) {
@@ -763,6 +779,20 @@ progress {
    object-fit: cover;
    border-radius: 0.625em;
  }
+ .filter-button{
+  padding: 0.625em 0.625em;
+  margin: 0.3em 0.3em;
+  height: min-content;
+  width: auto;
+  white-space: nowrap;
+  flex-wrap: wrap;
+ }
+
+.container-button{
+  display:block;
+  margin-bottom: 0.625em;
+
+}
  }
 
 @media (min-width: 576px) {

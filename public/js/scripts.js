@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const projects = document.querySelectorAll(".project");
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
+      //changer couleur du bouton lors du click
+      filterButtons.forEach((button) => {
+        button.classList.remove("active");
+      });
+      button.classList.toggle("active");
       const filterValue = button.getAttribute("data-filter");
 
       projects.forEach((project) => {
